@@ -1,0 +1,26 @@
+@font-face {
+  font-family: "Poppins Regular";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("Poppins Regular"),
+    url("../fonts/Poppins/Poppins-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Exclusive Editorial";
+  font-style: normal;
+  font-weight: normal;
+  src:
+    local("Exclusive Editorial"),
+    url("../fonts/Exclusive-Editorial/Exclusive-Editorial.ttf") format("truetype");
+}
+
+.font-exclusive {
+  font-family: "Exclusive Editorial", system-ui, sans-serif !important;
+  letter-spacing: 0.1rem;
+}
+
+* {
+  font-family: "Poppins Regular", system-ui, sans-serif;
+}

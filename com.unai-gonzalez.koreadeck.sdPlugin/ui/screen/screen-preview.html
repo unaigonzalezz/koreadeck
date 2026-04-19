@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>KOReadeck - Screen Preview</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = { darkMode: "class" };
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="../styles/fonts.css" />
+    <link rel="shortcut icon" href="../img/favicon.ico" />
+  </head>
+
+  <body
+    class="w-screen h-screen bg-teal-700 dark:bg-zinc-950 text-slate-900 overflow-hidden transition-colors duration-300"
+  >
+    <div class="w-full h-full flex">
+      <aside
+        class="w-60 flex-shrink-0 bg-white dark:bg-zinc-900 flex flex-col p-7 gap-5 overflow-hidden transition-colors duration-300"
+      >
+        <img src="../img/koreadeck-logo.png" alt="KOReadeck Logo" class="w-36" />
+
+        <div class="flex flex-col gap-1 min-h-0">
+          <p class="text-[10px] font-semibold text-slate-400 dark:text-zinc-500 uppercase tracking-widest mb-1">
+            Now reading
+          </p>
+          <p
+            id="bookTitle"
+            class="font-exclusive text-teal-600 dark:text-teal-400 text-lg font-semibold leading-tight line-clamp-3"
+          >
+            —
+          </p>
+          <p id="bookAuthor" class="text-xs text-slate-400 dark:text-zinc-500 mt-1 line-clamp-2">—</p>
+        </div>
+
+        <div
+          class="bg-teal-50 dark:bg-zinc-800 border border-teal-100 dark:border-zinc-700 rounded-2xl px-4 py-3 flex flex-col gap-0.5 transition-colors duration-300"
+        >
+          <p class="text-[10px] font-semibold text-teal-400 dark:text-teal-500 uppercase tracking-widest">Page</p>
+          <p id="bookPage" class="text-4xl font-bold text-teal-600 dark:text-teal-300 leading-none mt-1">—</p>
+          <p id="bookTotal" class="text-[10px] text-teal-400 dark:text-teal-500 mt-0.5"></p>
+        </div>
+
+        <button
+          id="refresh"
+          class="w-full px-4 py-2.5 rounded-xl bg-teal-600 hover:bg-teal-700 active:bg-teal-800 dark:bg-teal-700 dark:hover:bg-teal-600 text-white text-sm font-semibold flex items-center justify-center gap-2 transition-colors"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4 flex-shrink-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+            aria-hidden="true"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M16.023 9.348h4.992v-.001M2.985 19.644v-4.992m0 0h4.992m-4.993 0 3.181 3.183a8.25 8.25 0 0 0 13.803-3.7M4.031 9.865a8.25 8.25 0 0 1 13.803-3.7l3.181 3.182m0-4.991v4.99" />
+          </svg>
+          <span>Refresh now</span>
+        </button>
+
+        <button
+          id="themeToggle"
+          class="w-full px-4 py-2.5 rounded-xl border border-slate-200 dark:border-zinc-700 bg-transparent hover:bg-slate-50 dark:hover:bg-zinc-800 text-slate-600 dark:text-zinc-300 text-sm font-medium flex items-center justify-center gap-2 transition-colors"
+          aria-label="Toggle night mode"
+        >
+          <svg
+            id="iconMoon"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4 flex-shrink-0"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+          </svg>
+          <svg
+            id="iconSun"
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-4 h-4 flex-shrink-0 hidden"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+          </svg>
+          <span id="themeLabel">Night mode</span>
+        </button>
+
+        <div
+          class="rounded-xl bg-slate-50 dark:bg-zinc-800 border border-slate-100 dark:border-zinc-700 px-3 py-2.5 transition-colors duration-300"
+        >
+          <p class="text-[10px] text-slate-400 dark:text-zinc-500 leading-relaxed text-center">
+            Use your <span class="font-semibold text-slate-500 dark:text-zinc-300">Stream Deck actions</span> to
+            navigate and interact with KOReader, some actions won't work in certain contexts.<br />
+          </p>
+        </div>
+
+        <div
+          class="mt-auto flex items-start gap-2 pt-2 border-t border-slate-100 dark:border-zinc-800 transition-colors duration-300"
+        >
+          <span id="statusDot" class="w-2 h-2 rounded-full bg-slate-300 flex-shrink-0 mt-0.5"></span>
+          <span id="status" class="text-xs text-slate-400 leading-snug">Waiting for updates…</span>
+        </div>
+      </aside>
+
+      <main
+        class="flex-1 bg-teal-700 dark:bg-zinc-950 flex items-center justify-center p-5 overflow-hidden transition-colors duration-300"
+      >
+        <img
+          id="screen"
+          alt="KOReader screen preview"
+          class="max-w-full max-h-full rounded-lg object-contain transition-[filter] duration-300"
+          style="filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5))"
+        />
+      </main>
+    </div>
+
+    <script src="js/status.js"></script>
+    <script src="js/info.js"></script>
+    <script src="js/screen.js"></script>
+    <script src="js/poll.js"></script>
+    <script src="js/theme.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

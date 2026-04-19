@@ -1,0 +1,336 @@
+{
+  "Name": "KOReadeck",
+  "Version": "1.0.0.0",
+  "Author": "Unai González",
+  "Actions": [
+    {
+      "Name": "Configuration",
+      "UUID": "com.unai-gonzalez.koreadeck.set-config",
+      "Icon": "imgs/actions/config/icon",
+      "Tooltip": "Set up your KOReader device connection (IP, port, and timeout).",
+      "Controllers": [
+        "Keypad"
+      ],
+      "UserTitleEnabled": false,
+      "States": [
+        {
+          "Image": "imgs/actions/config/key",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "Name": "Open last document",
+      "UUID": "com.unai-gonzalez.koreadeck.open-last-document",
+      "Icon": "imgs/actions/open-last-document/icon",
+      "Tooltip": "Reopen your last read document instantly.",
+      "PropertyInspectorPath": "ui/general.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/open-last-document/key",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "Name": "Change page",
+      "UUID": "com.unai-gonzalez.koreadeck.change-page",
+      "Icon": "imgs/actions/view/key",
+      "Tooltip": "Navigate your book by turning pages forward or backward.",
+      "PropertyInspectorPath": "ui/change-page.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/common/bg",
+          "TitleAlignment": "middle",
+          "FontSize": 30
+        }
+      ]
+    },
+    {
+      "Name": "Reader settings",
+      "UUID": "com.unai-gonzalez.koreadeck.reader-settings",
+      "Icon": "imgs/actions/reader-settings/icon",
+      "Tooltip": "Open settings for the currently active document.",
+      "PropertyInspectorPath": "ui/general.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/reader-settings/key",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "Name": "Status bar",
+      "UUID": "com.unai-gonzalez.koreadeck.status-bar",
+      "Icon": "imgs/actions/status-bar/icon",
+      "Tooltip": "Show or toggle the KOReader status bar.",
+      "PropertyInspectorPath": "ui/general.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/status-bar/key",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "Name": "Show bookmarks",
+      "UUID": "com.unai-gonzalez.koreadeck.view-bookmarks",
+      "Icon": "imgs/actions/view-bookmarks/icon",
+      "Tooltip": "Open the bookmarks list for the current book.",
+      "PropertyInspectorPath": "ui/general.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/view-bookmarks/key",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "Name": "Toggle bookmark on current page",
+      "UUID": "com.unai-gonzalez.koreadeck.toggle-bookmark-current-page",
+      "Icon": "imgs/actions/toggle-bookmark/icon",
+      "Tooltip": "Add or remove a bookmark on the current page.",
+      "PropertyInspectorPath": "ui/general.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/toggle-bookmark/key",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "Name": "Toggle night mode",
+      "UUID": "com.unai-gonzalez.koreadeck.toggle-screen-mode",
+      "Icon": "imgs/actions/toggle-dark/icon",
+      "Tooltip": "Switch between light mode and night mode instantly.",
+      "PropertyInspectorPath": "ui/general.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/toggle-dark/day-mode",
+          "TitleAlignment": "middle",
+          "Name": "Light mode"
+        },
+        {
+          "Image": "imgs/actions/toggle-dark/dark-mode",
+          "TitleAlignment": "middle",
+          "Name": "Night mode"
+        }
+      ]
+    },
+    {
+      "Name": "Toggle frontlight",
+      "UUID": "com.unai-gonzalez.koreadeck.toggle-frontlight",
+      "Icon": "imgs/actions/toggle-frontlight/icon",
+      "Tooltip": "Toggle your device frontlight on or off.",
+      "PropertyInspectorPath": "ui/general.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/toggle-frontlight/off",
+          "TitleAlignment": "middle",
+          "Name": "Frontlight OFF"
+        },
+        {
+          "Image": "imgs/actions/toggle-frontlight/on",
+          "TitleAlignment": "middle",
+          "Name": "Frontlight ON"
+        }
+      ]
+    },
+    {
+      "Name": "Frontlight brightness",
+      "UUID": "com.unai-gonzalez.koreadeck.set-frontlight-brightness",
+      "Icon": "imgs/actions/frontlight-brightness/icon",
+      "Tooltip": "Adjust frontlight brightness in steps for optimal reading comfort.",
+      "PropertyInspectorPath": "ui/frontlight-brightness.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/frontlight-brightness/increase",
+          "TitleAlignment": "middle",
+          "FontSize": 24
+        }
+      ]
+    },
+    {
+      "Name": "Change screen orientation",
+      "UUID": "com.unai-gonzalez.koreadeck.change-orientation",
+      "Icon": "imgs/actions/change-orientation/icon",
+      "Tooltip": "Switch between portrait and landscape screen orientation.",
+      "PropertyInspectorPath": "ui/general.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/change-orientation/portrait",
+          "TitleAlignment": "middle",
+          "Name": "Portrait"
+        },
+        {
+          "Image": "imgs/actions/change-orientation/landscape",
+          "TitleAlignment": "middle",
+          "Name": "Landscape"
+        }
+      ]
+    },
+    {
+      "Name": "Book info",
+      "UUID": "com.unai-gonzalez.koreadeck.get-book-info",
+      "Icon": "imgs/actions/get-book-info/icon",
+      "Tooltip": "Display the current book cover and reading information.",
+      "PropertyInspectorPath": "ui/get-book-info.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "UserTitleEnabled": false,
+      "States": [
+        {
+          "Image": "imgs/actions/get-book-info/key",
+          "TitleAlignment": "bottom"
+        }
+      ]
+    },
+    {
+      "Name": "Battery level",
+      "UUID": "com.unai-gonzalez.koreadeck.battery-level",
+      "Icon": "imgs/actions/battery-level/icon",
+      "Tooltip": "Display the current battery level of your KOReader device.",
+      "PropertyInspectorPath": "ui/battery-level.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/battery-level/key-4",
+          "TitleAlignment": "middle",
+          "FontSize": 20
+        }
+      ]
+    },
+    {
+      "Name": "Screen preview",
+      "UUID": "com.unai-gonzalez.koreadeck.screen-preview",
+      "Icon": "imgs/actions/screen-preview/icon",
+      "Tooltip": "Open a live preview of your KOReader screen in your browser.",
+      "PropertyInspectorPath": "ui/general.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/screen-preview/key",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "Name": "Take screenshot",
+      "UUID": "com.unai-gonzalez.koreadeck.take-screenshot",
+      "Icon": "imgs/actions/take-screenshot/icon",
+      "Tooltip": "Capture the current KOReader screen and save it to your device.",
+      "PropertyInspectorPath": "ui/general.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/take-screenshot/key",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "Name": "Restart KOReader",
+      "UUID": "com.unai-gonzalez.koreadeck.restart-koreader",
+      "Icon": "imgs/actions/restart-koreader/icon",
+      "Tooltip": "Restart KOReader remotely.",
+      "PropertyInspectorPath": "ui/general.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/restart-koreader/key",
+          "TitleAlignment": "middle"
+        }
+      ]
+    },
+    {
+      "Name": "Exit KOReader",
+      "UUID": "com.unai-gonzalez.koreadeck.exit-koreader",
+      "Icon": "imgs/actions/exit-koreader/icon",
+      "Tooltip": "Close KOReader remotely. You will need to restart it manually.",
+      "PropertyInspectorPath": "ui/general.html",
+      "Controllers": [
+        "Keypad"
+      ],
+      "States": [
+        {
+          "Image": "imgs/actions/exit-koreader/key",
+          "TitleAlignment": "middle"
+        }
+      ]
+    }
+  ],
+  "Category": "KOReadeck",
+  "CategoryIcon": "imgs/plugin/category-icon",
+  "CodePath": "bin/plugin.js",
+  "Description": "Control KOReader directly from your Stream Deck.",
+  "Icon": "imgs/plugin/marketplace",
+  "SDKVersion": 3,
+  "Software": {
+    "MinimumVersion": "6.9"
+  },
+  "OS": [
+    {
+      "Platform": "mac",
+      "MinimumVersion": "12"
+    },
+    {
+      "Platform": "windows",
+      "MinimumVersion": "10"
+    }
+  ],
+  "Nodejs": {
+    "Version": "20",
+    "Debug": "enabled"
+  },
+  "UUID": "com.unai-gonzalez.koreadeck",
+  "Profiles": [
+    {
+      "Name": "KOReadeck",
+      "DeviceType": 0,
+      "Readonly": false,
+      "DontAutoSwitchWhenInstalled": false,
+      "AutoInstall": true
+    }
+  ],
+  "SupportURL": "https://unaigonzalez.es",
+  "URL": "https://unaigonzalez.es"
+}
