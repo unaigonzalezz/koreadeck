@@ -231,7 +231,7 @@ Feel free to suggest new actions in the Discussions tab.
 You don't need a physical Stream Deck to use this plugin. There are free and affordable alternatives:
 
 - **[Elgato Stream Deck Mobile](https://www.elgato.com/en/stream-deck-mobile)** — the official app for iOS and Android, free for up to 6 actions.
-- **Compatible keyboards** — some keyboards include built-in Stream Deck keys (e.g. Corsair K100 Air Wireless, Loupedeck series) and work natively with the Stream Deck software.
+- **Compatible keyboards** — some keyboards include built-in Stream Deck keys (e.g. Corsair Vanguard 96, Corsair Galleon...) and work natively with the Stream Deck software.
 
 <br />
 <img src="./com.unai-gonzalez.koreadeck.sdPlugin/imgs/previews/5.png" alt="KOReadeck Banner" style="width:100vh">
