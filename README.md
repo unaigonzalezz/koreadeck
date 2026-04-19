@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a><img src="./com.unai-gonzalez.koreadeck.sdPlugin/imgs/logo/koreadeck-logo.png" alt="KOReadeck Logo" height="100px"></a>
+  <a><img src="./com.unai-gonzalez.koreadeck.sdPlugin/imgs/logo/koreadeck-logo-bg.png" alt="KOReadeck Logo" height="200px"></a>
 </h1>
 
 <h3 align="center">Control your KOReader device directly from your Stream Deck.</h3>
